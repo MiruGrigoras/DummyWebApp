@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="card">
+      <div class="card-body card-background">
+        <mat-form-field>
+          <mat-label>Band</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let band of allBands" [value]="band.value">
+              {{band.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+
+      </div>
+    </div>
+
+</div>

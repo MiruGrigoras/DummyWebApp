@@ -1,0 +1,16 @@
+<div class="header-container back-image">
+  <div class="header-text">
+    Your wonderful calculator
+  </div>
+</div>
+
+
+<nav mat-tab-nav-bar mat-align-tabs="center" class="nav-container">
+  <a mat-tab-link *ngFor="let tab of allTabs"
+     [routerLink]="tab.link"
+     routerLinkActive #rla="routerLinkActive"
+     [active]="rla.isActive" class="active-link-nav">
+    {{tab.label}}
+  </a>
+</nav>
+<router-outlet></router-outlet>

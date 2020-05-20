@@ -4,17 +4,11 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
-const AppRoutes: Routes = [
-  {path:'', redirectTo:'main', pathMatch:'full'},
-  {path:'main', component: MainComponent, children:[
-      {path:'', redirectTo: 'calculator'},
-      {path:'calculator', component: CalculatorComponent},
-      {path:'wiki', component: WikiComponent}
-  ]},
-  {path: '**', redirectTo:'main'}
-];
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatSelectModule} from '@angular/material/select';
+import {MainComponent} from './main/main.component';
+import {WikiComponent} from './wiki/wiki.component';
+import {CalculatorComponent} from './calculator/calculator.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +21,8 @@ const AppRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(AppRoutes)
+    MatTabsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

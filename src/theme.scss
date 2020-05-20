@@ -1,8 +1,43 @@
 @import '~@angular/material/theming';
 @include mat-core();
 
-$my-app-primary: mat-palette($mat-cyan);
+$my-cyan: (
+    50 : #e4f9f9,
+    100 : #bcefef,
+    200 : #8fe5e5,
+    300 : #62dbda,
+    400 : #41d3d2,
+    500 : #1fcbca,
+    600 : #1bc6c5,
+    700 : #17bebd,
+    800 : #12b8b7,
+    900 : #0aacab,
+    A100 : #d8ffff,
+    A200 : #a5fffe,
+    A400 : #72fffe,
+    A700 : #58fffe,
+    contrast: (
+        50 : #424242,
+        100 : #424242,
+        200 : #424242,
+        300 : #424242,
+        400 : #424242,
+        500 : #424242,
+        600 : #424242,
+        700 : #424242,
+        800 : #424242,
+        900 : #ffffff,
+        A100 : #424242,
+        A200 : #424242,
+        A400 : #424242,
+        A700 : #424242,
+    )
+);
+
+
+
+$my-app-primary: mat-palette($my-cyan);
 $my-app-accent:  mat-palette($mat-pink, 500, 900, A100);
 $my-app-warn:    mat-palette($mat-deep-orange);
-$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+$my-app-theme: mat-dark-theme($my-app-primary, $my-app-accent, $my-app-warn);
 @include angular-material-theme($my-app-theme);

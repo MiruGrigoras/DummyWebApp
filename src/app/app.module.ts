@@ -4,8 +4,11 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GoogleMapsModule } from '@angular/google-maps'
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
+import {MatRadioModule} from '@angular/material/radio';
 import {MainComponent} from './main/main.component';
 import {WikiComponent} from './wiki/wiki.component';
 import {CalculatorComponent} from './calculator/calculator.component';
@@ -22,7 +25,10 @@ import {CalculatorComponent} from './calculator/calculator.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTabsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatInputModule,
+    MatRadioModule,
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

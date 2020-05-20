@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculatorComponent implements OnInit {
   allBands: any[];
+  allSeries: any[];
   constructor() {
     this.allBands = [
     {
@@ -28,8 +29,28 @@ export class CalculatorComponent implements OnInit {
     {
       value: '3.5Ic',
       viewValue: '3.5 GHz IC Integrated',
-    },
-    ]
+    }];
+    this.allSeries=[
+      {
+         value: 'd+',
+         viewValue: 'RADWIN 2000 D+',
+      },
+      {
+         value: 'c+',
+         viewValue: 'RADWIN 2000 C+',
+      },
+      {
+         value: 'c',
+         viewValue: 'RADWIN 2000 C',
+      },
+      {
+         value: 'b',
+         viewValue: 'RADWIN 2000 B',
+      },
+      {
+         value: 'x',
+         viewValue: 'RADWIN 2000 X',
+      }];
   }
 
   ngOnInit(): void {

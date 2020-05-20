@@ -1,24 +1,107 @@
 <div class="container">
     <div class="card">
       <div class="card-body card-background">
-        <mat-form-field>
-          <mat-label>Band</mat-label>
-          <mat-select>
-            <mat-option *ngFor="let band of allBands" [value]="band.value">
-              {{band.viewValue}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
+        <div class="row">
+          <div class="col" align="center">
+            <mat-form-field style="width:90%">
+              <mat-label>Band</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let band of allBands" [value]="band.value">
+                  {{band.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col" align="center">
+            <mat-form-field style="width:90%">
+              <mat-label>Series</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let series of allSeries" [value]="series.value">
+                  {{series.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body card-background">
+        <div class="row">
+          <div class="col" align="center">
+            <h2 class="card-title" style="color: white">Latitude</h2>
+            <div class="card-body card-background">
+              <div class="row">
+                <div class="col" align="center">
+                  <mat-form-field class="particular-width">
+                    <mat-label>Degrees</mat-label>
+                    <input matInput placeholder="Ex. 41">
+                  </mat-form-field>
+                </div>
+                <div class="col" align="center">
+                  <mat-form-field class="particular-width">
+                    <mat-label>Minutes</mat-label>
+                    <input matInput placeholder="Ex. 24">
+                  </mat-form-field>
+                </div>
+                <div class="col" align="center">
+                  <mat-form-field class="particular-width">
+                    <mat-label>Seconds</mat-label>
+                    <input matInput placeholder="Ex. 12.2">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button class="radio-button-padding" value="N">North</mat-radio-button>
+                    <mat-radio-button class="radio-button-padding" value="S">South</mat-radio-button>
+                  </mat-radio-group>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" align="center">
+            <h2 class="card-title" style="color:white">Longitude</h2>
+            <div class="card-body card-background">
+              <div class="row">
+                <div class="col" align="center">
+                  <mat-form-field class="particular-width">
+                    <mat-label>Degrees</mat-label>
+                    <input matInput placeholder="Ex. 2">
+                  </mat-form-field>
+                </div>
+                <div class="col" align="center">
+                  <mat-form-field class="particular-width">
+                    <mat-label>Minutes</mat-label>
+                    <input matInput placeholder="Ex. 10">
+                  </mat-form-field>
+                </div>
+                <div class="col" align="center">
+                  <mat-form-field class="particular-width">
+                    <mat-label>Seconds</mat-label>
+                    <input matInput placeholder="Ex. 26.5">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button class="radio-button-padding" value="E">East</mat-radio-button>
+                    <mat-radio-button class="radio-button-padding" value="W">West</mat-radio-button>
+                  </mat-radio-group>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="card">
       <div class="card-body">
+        <google-map width="100%">
 
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-body">
-
+        </google-map>
       </div>
     </div>
 

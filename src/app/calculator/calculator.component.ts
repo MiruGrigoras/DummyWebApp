@@ -79,9 +79,6 @@ export class CalculatorComponent implements OnInit {
     if(this.newCoords.longEW === "W")
       this.long = -this.long;
     this.goToLink = "https://www.google.com/maps/search/?api=1&query=" + this.lat + "," + this.long;
-
-    console.log(this.newCoords);
-    console.log(this.goToLink);
     this.goToPage(this.goToLink);
   }
 

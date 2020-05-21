@@ -54,7 +54,7 @@
               </div>
               <div class="row">
                 <div class="col">
-                  <mat-radio-group aria-label="Select an option" required [(ngModel)]="newCoords.latNS">
+                  <mat-radio-group aria-label="Select an option" required [(ngModel)]="newCoords.latNS" name="latNS">
                     <mat-radio-button class="radio-button-padding" value="N">North</mat-radio-button>
                     <mat-radio-button class="radio-button-padding" value="S">South</mat-radio-button>
                   </mat-radio-group>
@@ -87,7 +87,7 @@
               </div>
               <div class="row">
                 <div class="col">
-                  <mat-radio-group aria-label="Select an option" required [(ngModel)]="newCoords.longEW">
+                  <mat-radio-group aria-label="Select an option" required [(ngModel)]="newCoords.longEW"  name="longEW">
                     <mat-radio-button class="radio-button-padding" value="E">East</mat-radio-button>
                     <mat-radio-button class="radio-button-padding" value="W">West</mat-radio-button>
                   </mat-radio-group>

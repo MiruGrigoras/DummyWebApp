@@ -59,6 +59,16 @@ export class CalculatorComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.newCoords = {
+      degreesLat: 0,
+      degreesLong: 0,
+      latNS: "",
+      longEW: "",
+      minutesLat: 0,
+      minutesLong: 0,
+      secondsLat: 0,
+      secondsLong: 0
+    };
   }
 
   goToGMapsLink(){
@@ -69,5 +79,14 @@ export class CalculatorComponent implements OnInit {
     if(this.newCoords.longEW === "W")
       this.long = -this.long;
     this.goToLink = "https://www.google.com/maps/search/?api=1&query=" + this.lat + "," + this.long;
+
+    console.log(this.newCoords);
+    console.log(this.goToLink);
+    this.goToPage(this.goToLink);
   }
+
+  goToPage(url: string): void {
+    window.open(url, "_blank");
+  }
+
 }

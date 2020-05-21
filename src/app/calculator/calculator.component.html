@@ -5,7 +5,7 @@
           <div class="col" align="center">
             <mat-form-field style="width:90%">
               <mat-label>Band</mat-label>
-              <mat-select>
+              <mat-select required>
                 <mat-option *ngFor="let band of allBands" [value]="band.value">
                   {{band.viewValue}}
                 </mat-option>
@@ -15,7 +15,7 @@
           <div class="col" align="center">
             <mat-form-field style="width:90%">
               <mat-label>Series</mat-label>
-              <mat-select>
+              <mat-select required>
                 <mat-option *ngFor="let series of allSeries" [value]="series.value">
                   {{series.viewValue}}
                 </mat-option>
@@ -25,6 +25,7 @@
         </div>
       </div>
     </div>
+  <form class="">
     <div class="card">
       <div class="card-body card-background">
         <div class="row">
@@ -35,25 +36,25 @@
                 <div class="col" align="center">
                   <mat-form-field class="particular-width">
                     <mat-label>Degrees</mat-label>
-                    <input matInput placeholder="Ex. 41">
+                    <input matInput placeholder="Ex. 41" required [(ngModel)]="newCoords.degreesLat" name="degreesLat">
                   </mat-form-field>
                 </div>
                 <div class="col" align="center">
                   <mat-form-field class="particular-width">
                     <mat-label>Minutes</mat-label>
-                    <input matInput placeholder="Ex. 24">
+                    <input matInput placeholder="Ex. 24" required [(ngModel)]="newCoords.minutesLat" name="minutesLat">
                   </mat-form-field>
                 </div>
                 <div class="col" align="center">
                   <mat-form-field class="particular-width">
                     <mat-label>Seconds</mat-label>
-                    <input matInput placeholder="Ex. 12.2">
+                    <input matInput placeholder="Ex. 12.2" required [(ngModel)]="newCoords.secondsLat" name="secondsLat">
                   </mat-form-field>
                 </div>
               </div>
               <div class="row">
                 <div class="col">
-                  <mat-radio-group aria-label="Select an option">
+                  <mat-radio-group aria-label="Select an option" required [(ngModel)]="newCoords.latNS">
                     <mat-radio-button class="radio-button-padding" value="N">North</mat-radio-button>
                     <mat-radio-button class="radio-button-padding" value="S">South</mat-radio-button>
                   </mat-radio-group>
@@ -68,25 +69,25 @@
                 <div class="col" align="center">
                   <mat-form-field class="particular-width">
                     <mat-label>Degrees</mat-label>
-                    <input matInput placeholder="Ex. 2">
+                    <input matInput placeholder="Ex. 2" required [(ngModel)]="newCoords.degreesLong" name="degreesLong">
                   </mat-form-field>
                 </div>
                 <div class="col" align="center">
                   <mat-form-field class="particular-width">
                     <mat-label>Minutes</mat-label>
-                    <input matInput placeholder="Ex. 10">
+                    <input matInput placeholder="Ex. 10" required [(ngModel)]="newCoords.minutesLong" name="minutesLong">
                   </mat-form-field>
                 </div>
                 <div class="col" align="center">
                   <mat-form-field class="particular-width">
                     <mat-label>Seconds</mat-label>
-                    <input matInput placeholder="Ex. 26.5">
+                    <input matInput placeholder="Ex. 26.5" required [(ngModel)]="newCoords.secondsLong" name="secondsLong">
                   </mat-form-field>
                 </div>
               </div>
               <div class="row">
                 <div class="col">
-                  <mat-radio-group aria-label="Select an option">
+                  <mat-radio-group aria-label="Select an option" required [(ngModel)]="newCoords.longEW">
                     <mat-radio-button class="radio-button-padding" value="E">East</mat-radio-button>
                     <mat-radio-button class="radio-button-padding" value="W">West</mat-radio-button>
                   </mat-radio-group>
@@ -95,14 +96,14 @@
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col" align="center">
+            <a href="https://{{goToLink}}">
+              <button mat-raised-button class="button-color" click="goToGMapsLink()">Calculate</button>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-body">
-        <google-map width="100%">
-
-        </google-map>
-      </div>
-    </div>
-
+  </form>
 </div>

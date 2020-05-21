@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MyCoordinates } from '../app.model';
 
 @Component({
   selector: 'app-calculator',
@@ -8,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class CalculatorComponent implements OnInit {
   allBands: any[];
   allSeries: any[];
+  newCoords: MyCoordinates;
+  private lat:number;
+  private long: number;
+  goToLink: string;
   constructor() {
     this.allBands = [
     {
@@ -56,4 +61,13 @@ export class CalculatorComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  goToGMapsLink(){
+    this.lat = this.newCoords.degreesLat + this.newCoords.minutesLat/60  + this.newCoords.secondsLat/3600;
+    this.long = this.newCoords.degreesLong + this.newCoords.minutesLong/60  + this.newCoords.secondsLong/3600;
+    if(this.newCoords.latNS === "S")
+      this.lat = -this.lat;
+    if(this.newCoords.longEW === "W")
+      this.long = -this.long;
+    this.goToLink = "https://www.google.com/maps/search/?api=1&query=" + this.lat + "," + this.long;
+  }
 }

@@ -1,0 +1,7 @@
+.new-review{
+  max-width: 80%;
+}
+
+button:enabled.button-color{
+    background-color:#1fcbca;
+}

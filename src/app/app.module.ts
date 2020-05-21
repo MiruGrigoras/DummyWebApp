@@ -15,6 +15,9 @@ import {MainComponent} from './main/main.component';
 import {WikiComponent} from './wiki/wiki.component';
 import {CalculatorComponent} from './calculator/calculator.component';
 import { ExternalLinkDirective } from './extrenal-link.directive';
+import { WikiTabsComponent } from './wiki-tabs/wiki-tabs.component';
+import { ReviewsComponent } from './reviews/reviews.component';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { ExternalLinkDirective } from './extrenal-link.directive';
     CalculatorComponent,
     WikiComponent,
     ExternalLinkDirective,
+    WikiTabsComponent,
+    ReviewsComponent,
+    InfoComponent,
   ],
   imports: [
     BrowserModule,

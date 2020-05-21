@@ -1,0 +1,41 @@
+
+<blockquote *ngFor="let review of reviews">
+  <b> Stars: {{review.stars}}</b> {{review.body}}
+  <cite>by: {{review.author}}</cite>
+</blockquote>
+
+<blockquote>
+  <b> Stars: {{newReview?.stars}}</b> {{newReview?.body}}
+  <cite>by: {{newReview?.author}}</cite>
+</blockquote>
+<hr>
+<h2>Submit a review</h2>
+
+<form class="new-review" (ngSubmit)="onSubmit()" #newForm="ngForm">
+  <mat-form-field style="width:100%">
+    <mat-label>Rate the Product</mat-label>
+    <mat-select [(ngModel)]="newReview.stars" name="stars" required #stars="ngModel">
+      <mat-option [value]="1">1</mat-option>
+      <mat-option [value]="2">2</mat-option>
+      <mat-option [value]="3">3</mat-option>
+      <mat-option [value]="4">4</mat-option>
+      <mat-option [value]="5">5</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" style="width:100%">
+    <mat-label>Write a short review...</mat-label>
+    <textarea matInput [(ngModel)]="newReview.body" name="body"></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" style="width:100%">
+    <mat-label>Email address</mat-label>
+    <input matInput type="email" required email #author="ngModel" placeholder="something@example.org" class="form-control" [(ngModel)]="newReview.author"
+           name="email" style="background-color:#555555" >
+  </mat-form-field>
+
+  <div>
+    <button mat-raised-button type="submit" class="button-color"  [disabled]="!newForm.form.valid">Submit Review</button>
+  </div>
+</form>
+

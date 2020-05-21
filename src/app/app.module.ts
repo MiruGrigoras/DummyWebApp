@@ -9,6 +9,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatButtonModule} from '@angular/material/button';
 import {MainComponent} from './main/main.component';
 import {WikiComponent} from './wiki/wiki.component';
 import {CalculatorComponent} from './calculator/calculator.component';
@@ -36,7 +37,8 @@ import { InfoComponent } from './info/info.component';
     MatInputModule,
     MatRadioModule,
     GoogleMapsModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

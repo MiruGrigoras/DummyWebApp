@@ -1,30 +1,27 @@
-<div>
-  <nav mat-tab-nav-bar mat-align-tabs="center" class="nav-container">
-    <a mat-tab-link [routerLink]="./info" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive" class="active-link-nav" (click)='selectTab(1)' [class.active]="isSelected(1)">
-      Info
-    </a>
-    <a mat-tab-link [routerLink]="./reviews" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive" class="active-link-nav" (click)='selectTab(2)' [class.active]="isSelected(2)">
-      Reviews
-    </a>
-  </nav>
-
-  <router-outlet></router-outlet>
-</div>
-
-
-<div class="card-tabs">
-  <ul class="tabs">
-    <li class="tab"><a (click)='selectTab(1)' [class.active]="isSelected(1)">Info</a></li>
-    <li class="tab"><a (click)='selectTab(2)' [class.active]="isSelected(2)">Reviews</a></li>
-  </ul>
-</div>
 <div class="card-content">
-  <div class="ingredients" *ngIf="isSelected(1)">
-    <h5>Info</h5>
-    <blockquote>Band: {{obj.band}}</blockquote>
-    <blockquote>Series: {{obj.series}}</blockquote>
-    <blockquote>Channel bandwidth: {{obj.channelBandwidth}}</blockquote>
+  <div class="row">
+    <div class="col" align="center">
+      <nav mat-tab-nav-bar mat-align-tabs="center" class="nav-container"  align="center">
+        <a mat-tab-link class="active-link-nav" (click)='selectTab(1)' [class.active]="isSelected(1)">
+          Info
+        </a>
+        <a mat-tab-link class="active-link-nav" (click)='selectTab(2)' [class.active]="isSelected(2)">
+          Reviews
+        </a>
+      </nav>
+    </div>
+
   </div>
 
-  <app-reviews *ngIf="isSelected(2)" [reviews]="obj.reviews"></app-reviews>
+  <div class="row" style="padding-top:5%;">
+    <div class="col" align="center">
+      <div *ngIf="isSelected(1)">
+        <blockquote>Band: {{obj.band}}</blockquote>
+        <blockquote>Series: {{obj.series}}</blockquote>
+        <blockquote>Channel bandwidth: {{obj.channelBandwidth}}</blockquote>
+      </div>
+
+      <app-reviews *ngIf="isSelected(2)" [reviews]="obj.reviews"></app-reviews>
+    </div>
+  </div>
 </div>

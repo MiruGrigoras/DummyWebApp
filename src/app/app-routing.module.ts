@@ -10,13 +10,7 @@ const routes: Routes = [
   {path:'main', component: MainComponent, children:[
       {path:'', redirectTo: 'calculator', pathMatch:'full'},
       {path:'calculator', component: CalculatorComponent},
-      {path:'wiki', component: WikiComponent, children:[
-          {path:'', component: WikiTabsComponent, children:[
-            {path:'', redirectTo: 'info', pathMatch:'full'},
-            {path:'info', component: WikiTabsComponent},
-            {path:'reviews', component: WikiComponent},
-            ]},
-      ]},
+      {path:'wiki', component: WikiComponent}
   ]},
   {path: '**', redirectTo:'main'}
 ];

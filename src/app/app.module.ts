@@ -12,6 +12,8 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MainComponent} from './main/main.component';
 import {WikiComponent} from './wiki/wiki.component';
 import {CalculatorComponent} from './calculator/calculator.component';
+import { WikiTabsComponent } from './wiki-tabs/wiki-tabs.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import {CalculatorComponent} from './calculator/calculator.component';
     MainComponent,
     CalculatorComponent,
     WikiComponent,
+    WikiTabsComponent,
+    ReviewsComponent,
   ],
   imports: [
     BrowserModule,

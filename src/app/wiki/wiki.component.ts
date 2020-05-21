@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MyObj} from "../app.model";
+import {OBJ} from "../app.data";
 
 @Component({
   selector: 'app-wiki',
@@ -6,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wiki.component.css']
 })
 export class WikiComponent implements OnInit {
-
-  constructor() { }
+  objects: Array<MyObj>;
+  constructor() {
+    this.objects = OBJ;
+  }
 
   ngOnInit(): void {
   }

@@ -14,6 +14,7 @@ import {WikiComponent} from './wiki/wiki.component';
 import {CalculatorComponent} from './calculator/calculator.component';
 import { WikiTabsComponent } from './wiki-tabs/wiki-tabs.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ReviewsComponent } from './reviews/reviews.component';
     MatSelectModule,
     MatInputModule,
     MatRadioModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,10 +6,10 @@ import {MyObj} from "../app.model";
   templateUrl: './wiki-tabs.component.html',
   styleUrls: ['./wiki-tabs.component.css']
 })
-export class WikiTabsComponent implements OnInit {
+export class WikiTabsComponent{
 
   @Input()
-  private obj: MyObj;
+  obj: MyObj;
 
   private tab: number;
 

@@ -1,1 +1,14 @@
-<p>wiki works!</p>
+<p>wiki works!</p><div class="container">
+  <div id="pizza" *ngFor='let obj of objects'>
+    <div class="card horizontal" *ngIf="!obj.available">
+      <div class="card-stacked">
+        <div class="card-content">
+          <p class="card-title">
+            Item: {{obj.name}}
+          </p>
+        </div>
+        <app-wiki-tabs [obj]="obj"></app-wiki-tabs>
+      </div>
+    </div>
+  </div>
+</div>

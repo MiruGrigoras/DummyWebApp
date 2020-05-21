@@ -6,8 +6,10 @@ export interface MyReview{
 }
 
 export interface MyObj{
-  name?: string;
-  band?:string;
-  series?: string;
-  channelBandwidth?: number;
+  name?: string,
+  band?:string,
+  series?: string,
+  channelBandwidth?: number,
+  available?:boolean,
+  reviews?: Array<MyReview>,
 }

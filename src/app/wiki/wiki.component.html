@@ -1,14 +1,12 @@
-<p>wiki works!</p><div class="container">
-  <div id="pizza" *ngFor='let obj of objects'>
-    <div class="card horizontal" *ngIf="!obj.available">
-      <div class="card-stacked">
+<div class="container" style="color:white;">
+  <div class="card" *ngFor='let obj of objects'>
+    <div class="card-body card-background" *ngIf="obj.available">
         <div class="card-content">
-          <p class="card-title">
+          <div class="card-title" style="font-size:200%;" align="center">
             Item: {{obj.name}}
-          </p>
+          </div>
         </div>
-        <app-wiki-tabs [obj]="obj"></app-wiki-tabs>
-      </div>
+        <router-outlet [obj]="obj"></router-outlet>
     </div>
   </div>
 </div>

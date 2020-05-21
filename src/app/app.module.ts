@@ -15,6 +15,7 @@ import {CalculatorComponent} from './calculator/calculator.component';
 import { WikiTabsComponent } from './wiki-tabs/wiki-tabs.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import {FormsModule} from "@angular/forms";
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {FormsModule} from "@angular/forms";
     WikiComponent,
     WikiTabsComponent,
     ReviewsComponent,
+    InfoComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,21 @@
+<div>
+  <nav mat-tab-nav-bar mat-align-tabs="center" class="nav-container">
+    <a mat-tab-link [routerLink]="./info" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive" class="active-link-nav" (click)='selectTab(1)' [class.active]="isSelected(1)">
+      Info
+    </a>
+    <a mat-tab-link [routerLink]="./reviews" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive" class="active-link-nav" (click)='selectTab(2)' [class.active]="isSelected(2)">
+      Reviews
+    </a>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>
+
+
 <div class="card-tabs">
   <ul class="tabs">
     <li class="tab"><a (click)='selectTab(1)' [class.active]="isSelected(1)">Info</a></li>
-    <li class="tab"><a (click)='selectTab(3)' [class.active]="isSelected(2)">Reviews</a></li>
+    <li class="tab"><a (click)='selectTab(2)' [class.active]="isSelected(2)">Reviews</a></li>
   </ul>
 </div>
 <div class="card-content">

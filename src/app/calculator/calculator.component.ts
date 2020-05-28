@@ -72,12 +72,12 @@ export class CalculatorComponent implements OnInit {
   }
 
   goToGMapsLink(){
-    this.lat = this.newCoords.degreesLat + this.newCoords.minutesLat/60  + this.newCoords.secondsLat/3600;
-    this.long = this.newCoords.degreesLong + this.newCoords.minutesLong/60  + this.newCoords.secondsLong/3600;
+    this.lat = (+this.newCoords.degreesLat) + (+this.newCoords.minutesLat/60)  + (+this.newCoords.secondsLat/3600);
+    this.long = (+this.newCoords.degreesLong) + (+this.newCoords.minutesLong/60)  + (+this.newCoords.secondsLong/3600);
     if(this.newCoords.latNS === "S")
-      this.lat = this.lat * (-1);
+      this.lat = (+this.lat) * (-1);
     if(this.newCoords.longEW === "W")
-      this.long = this.long * (-1);
+      this.long = (+this.long) * (-1);
     this.goToLink = "https://www.google.com/maps/search/?api=1&query=" + this.lat + "," + this.long;
     console.log(this.newCoords);
     console.log(this.lat);
